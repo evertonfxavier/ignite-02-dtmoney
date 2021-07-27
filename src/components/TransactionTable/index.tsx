@@ -1,10 +1,16 @@
+import { useEffect } from "react";
 
+import { api } from "../../services/api";
 // import { useTransactions } from '../../hooks/useTransactions';
 
 import { Container } from "./styles";
 
 export function TransactionTable() {
   // const { transactions } = useTransactions();
+
+  useEffect(() => {
+    api.get("transactions").then((response) => console.log(response.data));
+  }, []);
 
   return (
     <Container>
@@ -38,5 +44,5 @@ export function TransactionTable() {
         </tbody> */}
       </table>
     </Container>
-  )
+  );
 }
