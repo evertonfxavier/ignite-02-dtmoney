@@ -1,13 +1,16 @@
-import React from "react";
-import logoImg from '../../assets/logo.svg';
+import React, { useState } from "react";
+import logoImg from "../../assets/logo.svg";
 
-import { Container, Content } from './styles';
+import Modal from "react-modal";
+
+import { Container, Content } from "./styles";
 
 interface HeaderProps {
-    onOpenNewTransactionModal?: () => void;
-  }
+  onOpenNewTransactionModal?: () => void;
+}
 
 export function Header({ onOpenNewTransactionModal }: HeaderProps) {
+
   return (
     <Container>
       <Content>
